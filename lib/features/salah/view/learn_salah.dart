@@ -165,18 +165,18 @@ De Abu Málik Al Hariz Ibn Asim Al Asharí, Allah esté complacido con él que e
 
 // También 10 minutos antes del final del tiempo de oración.''',
 //                       ),
-                      SectionItemHomePageWidget(
-                        onTap: () {
-                          Get.to(() => const QiblaCompass());
-                        },
-                        sectionIcon: AppSvgs.qibla,
-                        sectionName: 'Qibla',
-                        sectionSubtitle: '',
-                        textInfo: '''
-Qibla dirección 
+//                       SectionItemHomePageWidget(
+//                         onTap: () {
+//                           Get.to(() => const QiblaCompass());
+//                         },
+//                         sectionIcon: AppSvgs.qibla,
+//                         sectionName: 'Qibla',
+//                         sectionSubtitle: '',
+//                         textInfo: '''
+// Qibla dirección
 
- Puedes identificar la dirección de la Qibla a través de la flecha naranja en la dirección de la forma de la Kaaba.''',
-                      ),
+//  Puedes identificar la dirección de la Qibla a través de la flecha naranja en la dirección de la forma de la Kaaba.''',
+//                       ),
                     ],
                   ),
                 ),
