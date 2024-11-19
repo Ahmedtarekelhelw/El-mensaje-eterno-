@@ -43,7 +43,7 @@ dependencies:
   geolocator: ^9.0.2
   #  #flutter_qiblah: ^2.0.0
   #  #location:
-  location: ^5.0.3
+  # location: ^5.0.3
   # flutter_compass:
   jhijri: ^0.0.1
   timer_builder: ^2.0.0
@@ -63,6 +63,8 @@ dependencies:
 
   http: any
   pdfx: ^2.8.0
+  flutter_compass: ^0.8.1
+  location: ^7.0.1
 dev_dependencies:
   flutter_test:
     sdk: flutter

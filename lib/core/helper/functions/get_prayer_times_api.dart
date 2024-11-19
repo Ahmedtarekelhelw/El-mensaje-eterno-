@@ -1,16 +1,16 @@
 // import 'dart:convert';
 
-// import 'package:connectivity_plus/connectivity_plus.dart';
 // import 'package:http/http.dart' as http;
 // import 'package:intl/intl.dart';
 
 // class HelperMethods {
-//   static Future<dynamic> getPrayerTimesFromAPI(String city, String country) async {
+//   static Future<dynamic> getPrayerTimesFromAPI(
+//       String city, String country) async {
 //     //String placeAddress= '';
-//     var connectivityResult = await Connectivity().checkConnectivity();
-//     if (connectivityResult != ConnectivityResult.mobile && connectivityResult != ConnectivityResult.wifi) {
-//       return 'no internet';
-//     }
+//     // var connectivityResult = await Connectivity().checkConnectivity();
+//     // if (connectivityResult != ConnectivityResult.mobile && connectivityResult != ConnectivityResult.wifi) {
+//     //   return 'no internet';
+//     // }
 //     String url =
 //         'https://api.aladhan.com/v1/timingsByCity?date=${DateFormat(DateFormat.YEAR_ABBR_MONTH_DAY).format(DateTime.now())}&city=$city&country=$country&method=4';
 //     var response = await getRequest(url);
@@ -26,10 +26,12 @@
 //     }
 //   }
 
-//   static Future<dynamic> getPrayerTimesFromAPIByLocaion(double latitude, double longitude) async {
+//   static Future<dynamic> getPrayerTimesFromAPIByLocaion(
+//       double latitude, double longitude) async {
 //     //String placeAddress= '';
 //     var connectivityResult = await Connectivity().checkConnectivity();
-//     if (connectivityResult != ConnectivityResult.mobile && connectivityResult != ConnectivityResult.wifi) {
+//     if (connectivityResult != ConnectivityResult.mobile &&
+//         connectivityResult != ConnectivityResult.wifi) {
 //       return 'no internet';
 //     }
 //     String url =
