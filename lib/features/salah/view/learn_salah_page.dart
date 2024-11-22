@@ -4,9 +4,8 @@ import 'package:hiwayda_oracion_islamica/core/constants/app_svgs.dart';
 import 'package:hiwayda_oracion_islamica/core/constants/app_text_styles.dart';
 import 'package:hiwayda_oracion_islamica/core/helper/extensions/assetss_widgets.dart';
 import 'package:hiwayda_oracion_islamica/core/helper/extensions/context_size.dart';
-import 'package:hiwayda_oracion_islamica/features/salah/model/tahara_lesson_model.dart';
+import 'package:hiwayda_oracion_islamica/features/salah/data/model/tahara_lesson_model.dart';
 import 'package:hiwayda_oracion_islamica/features/salah/view/widgets/options.dart';
-
 
 class LearnSalahPage extends StatelessWidget {
   const LearnSalahPage({Key? key}) : super(key: key);
@@ -52,7 +51,8 @@ class LearnSalahPage extends StatelessWidget {
                                 if (snapshot.hasError) {
                                   print('snapshot.error ${snapshot.error}');
                                   return Center(
-                                    child: Text('Some error occurred ${snapshot.error}'),
+                                    child: Text(
+                                        'Some error occurred ${snapshot.error}'),
                                   );
                                 } else {
                                   return buildLessons(taharaLessons!);

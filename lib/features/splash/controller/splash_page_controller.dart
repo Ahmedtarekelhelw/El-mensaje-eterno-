@@ -7,7 +7,7 @@ import 'package:hiwayda_oracion_islamica/features/home/presentation/controller/h
 import 'package:hiwayda_oracion_islamica/features/navigation_screen/navigation_screen.dart';
 import 'package:hiwayda_oracion_islamica/features/non_muslim/non_muslim_bindings.dart';
 import 'package:hiwayda_oracion_islamica/features/non_muslim/presentation/controller/non_muslim_controller.dart';
-import 'package:hiwayda_oracion_islamica/features/salah/model/tahara_lesson_model.dart';
+import 'package:hiwayda_oracion_islamica/features/salah/data/model/tahara_lesson_model.dart';
 
 class SplashPageController extends GetxController {
   @override

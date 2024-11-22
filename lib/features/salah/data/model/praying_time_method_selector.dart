@@ -1,11 +1,11 @@
-
 import 'package:adhan_dart/adhan_dart.dart';
-import 'package:hiwayda_oracion_islamica/features/salah/model/region_model.dart';
+import 'package:hiwayda_oracion_islamica/features/salah/data/model/region_model.dart';
 
 class CalculationMethodSelector {
-  static CalculationParameters getCalculationMethod(double latitude, double longitude) {
+  static CalculationParameters getCalculationMethod(
+      double latitude, double longitude) {
     if (isInRegion(latitude, longitude, _middleEastNorthAfrica)) {
-     return  CalculationMethod.muslimWorldLeague();
+      return CalculationMethod.muslimWorldLeague();
     } else if (isInRegion(latitude, longitude, _egyptRegion)) {
       return CalculationMethod.egyptian();
     } else if (isInRegion(latitude, longitude, _southAsia)) {
@@ -29,21 +29,25 @@ class CalculationMethodSelector {
     } else if (isInRegion(latitude, longitude, _moroccoRegion)) {
       return CalculationMethod.morocco();
     } else if (isInRegion(latitude, longitude, _europeRegion)) {
-      return CalculationMethod.muslimWorldLeague(); 
+      return CalculationMethod.muslimWorldLeague();
     } else if (isInRegion(latitude, longitude, _australiaRegion)) {
-      return CalculationMethod.other(); 
+      return CalculationMethod.other();
     } else if (isInRegion(latitude, longitude, _southAmericaRegion)) {
-      return CalculationMethod.other(); 
+      return CalculationMethod.other();
     } else if (isInRegion(latitude, longitude, _centralAsiaRegion)) {
-      return CalculationMethod.ummAlQura(); 
+      return CalculationMethod.ummAlQura();
     } else {
       return CalculationMethod.other();
     }
   }
 
-  static bool isInRegion(double latitude, double longitude, List<Region> regions) {
+  static bool isInRegion(
+      double latitude, double longitude, List<Region> regions) {
     for (var region in regions) {
-      if (latitude >= region.minLat && latitude <= region.maxLat && longitude >= region.minLon && longitude <= region.maxLon) {
+      if (latitude >= region.minLat &&
+          latitude <= region.maxLat &&
+          longitude >= region.minLon &&
+          longitude <= region.maxLon) {
         return true;
       }
     }
@@ -97,7 +101,6 @@ class CalculationMethodSelector {
   static final List<Region> _moroccoRegion = [
     Region(minLat: 21.0, maxLat: 36.0, minLon: -17.0, maxLon: -1.0)
   ];
-
 
   static final List<Region> _europeRegion = [
     Region(minLat: 35.0, maxLat: 71.0, minLon: -10.0, maxLon: 40.0)
