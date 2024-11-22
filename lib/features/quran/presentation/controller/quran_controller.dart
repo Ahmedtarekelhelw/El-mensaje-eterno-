@@ -6,6 +6,7 @@ import 'package:hiwayda_oracion_islamica/core/constants/app_enums.dart';
 import 'package:hiwayda_oracion_islamica/core/helpers/get_state_from_failure.dart';
 import 'package:hiwayda_oracion_islamica/features/quran/domain/entities/ayah_entity.dart';
 import 'package:hiwayda_oracion_islamica/features/quran/domain/entities/surah_entity.dart';
+import 'package:hiwayda_oracion_islamica/features/quran/domain/usecases/get_online_surahs_use_case.dart';
 import 'package:hiwayda_oracion_islamica/features/quran/domain/usecases/get_surahs_use_case.dart';
 import 'package:get/get.dart';
 
@@ -35,7 +36,30 @@ class QuranController extends GetxController {
     getSurahsState = StateType.loading;
     update();
     GetSurahsUseCase getSurahsUseCase = GetSurahsUseCase(Get.find());
+    GetOnlineSurahsUseCase getOnlineSurahsUseCase =
+        GetOnlineSurahsUseCase(quranRepo: Get.find());
+    // var onlineData = await getOnlineSurahsUseCase();
     var result = await getSurahsUseCase();
+
+    // onlineData.fold(
+    //   (l) async {
+    //     getSurahsState = getStateFromFailure(l);
+    //     validationMessage = l.message;
+    //     log('falied');
+    //     update();
+    //     await Future.delayed(const Duration(milliseconds: 50));
+    //     getSurahsState = StateType.init;
+    //   },
+    //   (r) {
+    //     getSurahsState = StateType.success;
+    //     surahs = r;
+    //     log('success');
+
+    //     print(surahs);
+    //     // log(surahs[0].ayat[0].noorinternationallatin);
+    //     update();
+    //   },
+    // );
     result.fold(
       (l) async {
         getSurahsState = getStateFromFailure(l);
